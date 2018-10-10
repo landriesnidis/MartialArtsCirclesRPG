@@ -1,0 +1,4 @@
+[
+{"name":"木剑","note":"用木头制成的武器。","level":"1","equip_part":"武器","equip_type":"剑","inc_atk":"4","inc_def":"0","inc_speed":"0","inc_con":"0"},
+{"name":"砍柴刀","note":"平常农夫用于砍柴的铁刀。","level":"1","equip_part":"武器","equip_type":"刀","inc_atk":"10","inc_def":"0","inc_speed":"0","inc_con":"0"},
+]

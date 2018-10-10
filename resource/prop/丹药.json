@@ -1,0 +1,5 @@
+[
+{"name":"水果","note":"寻常的水果。","level":"1","inc_atk":"0","inc_def":"0","inc_speed":"0","inc_con":"0","inc_hp":"5","inc_vit":"0","inc_luck":"0"},
+{"name":"酒","note":"以米加酒曲酿制而成，可恢复微量的活力。","level":"1","inc_atk":"0","inc_def":"0","inc_speed":"0","inc_con":"0","inc_hp":"0","inc_vit":"3","inc_luck":"0"},
+{"name":"止血草","note":"嚼碎后敷在伤口上，可迅速止血。","level":"1","inc_atk":"0","inc_def":"0","inc_speed":"0","inc_con":"0","inc_hp":"20","inc_vit":"0","inc_luck":"0"},
+]
