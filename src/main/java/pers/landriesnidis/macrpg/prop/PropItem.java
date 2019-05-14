@@ -4,6 +4,11 @@ import java.util.HashMap;
 
 import pers.landriesnidis.macrpg.prop.enums.ItemType;
 
+/**
+ * 道具项
+ * @author Administrator
+ *
+ */
 public class PropItem extends BaseItem{
 
 	public PropItem() {

@@ -2,6 +2,11 @@ package pers.landriesnidis.macrpg.prop;
 
 import pers.landriesnidis.macrpg.prop.enums.ItemType;
 
+/**
+ * 装备项
+ * @author Administrator
+ *
+ */
 public class EquipItem extends BaseItem{
 
 	public EquipItem() {

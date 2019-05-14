@@ -2,6 +2,11 @@ package pers.landriesnidis.macrpg.prop;
 
 import pers.landriesnidis.macrpg.prop.enums.ItemType;
 
+/**
+ * 武技项
+ * @author Administrator
+ *
+ */
 public class MartialItem extends BaseItem{
 
 	public MartialItem() {

@@ -2,6 +2,11 @@ package pers.landriesnidis.macrpg.prop;
 
 import pers.landriesnidis.macrpg.prop.enums.ItemType;
 
+/**
+ * 药品项
+ * @author Administrator
+ *
+ */
 public class DrugItem extends BaseItem{
 
 	private int inc_atk;

@@ -2,6 +2,11 @@ package pers.landriesnidis.macrpg.prop;
 
 import pers.landriesnidis.macrpg.prop.enums.ItemType;
 
+/**
+ * 内功项
+ * @author Administrator
+ *
+ */
 public class ForceItem extends BaseItem{
 	private String factions;
 	private int inc_atk;

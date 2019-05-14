@@ -6,7 +6,6 @@ import pers.landriesnidis.macrpg.player.Player;
 import pers.landriesnidis.macrpg.prop.BaseItem;
 import pers.landriesnidis.macrpg.prop.ForceItem;
 import pers.landriesnidis.macrpg.prop.enums.ItemType;
-import pers.landriesnidis.macrpg.prop.utils.ItemUtil;
 import pers.landriesnidis.ptm4j.menu.TextMenu;
 import pers.landriesnidis.ptm4j.menu.events.StartEvent;
 import pers.landriesnidis.ptm4j.option.Option;
@@ -117,9 +116,9 @@ public class ItemMenu extends TextMenu{
 	private static String buildItemInfoString(BaseItem item, String itemNum){
 		if(item.getItemType() == ItemType.FORCE){
 			ForceItem fi = ((ForceItem)item);
-			return String.format("说明：%s\n类型：%s\n等级：%d\n数量：%s\n所属宗派：%s\n附带武技：%s", item.getNote(),ItemUtil.getTypeName(item.getItemType()),item.getLevel(),itemNum,fi.getFactions()==null?"江湖流传":fi.getFactions(),fi.getMartial()==null?"无":fi.getMartial());
+			return String.format("说明：%s\n类型：%s\n等级：%d\n数量：%s\n所属宗派：%s\n附带武技：%s", item.getNote(),item.getItemType(),item.getLevel(),itemNum,fi.getFactions()==null?"江湖流传":fi.getFactions(),fi.getMartial()==null?"无":fi.getMartial());
 		}else{
-			return String.format("说明：%s\n类型：%s\n等级：%d\n数量：%s", item.getNote(),ItemUtil.getTypeName(item.getItemType()),item.getLevel(),itemNum);
+			return String.format("说明：%s\n类型：%s\n等级：%d\n数量：%s", item.getNote(),item.getItemType(),item.getLevel(),itemNum);
 		}
 	}
 }
