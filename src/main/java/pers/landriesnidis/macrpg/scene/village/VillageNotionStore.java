@@ -18,7 +18,6 @@ public class VillageNotionStore extends BaseStore{
 		addGoods("鸡蛋", 20);
 		addGoods("盐巴", 10);
 		addGoods("石料", 30);
-		addGoods("铁锭", 280);
 		
 		setFreeRate(0.2);
 		setUpdateTime(1*60*1000); // 1分钟更新一次
