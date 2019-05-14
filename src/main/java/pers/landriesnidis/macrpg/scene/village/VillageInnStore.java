@@ -35,6 +35,5 @@ public class VillageInnStore extends BaseStore{
 			}
 		});
 		addBackOption("离开");
-		
 	}
 }

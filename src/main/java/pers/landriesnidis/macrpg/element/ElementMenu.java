@@ -6,12 +6,14 @@ import pers.landriesnidis.macrpg.player.Player;
 import pers.landriesnidis.ptm4j.menu.TextMenu;
 import pers.landriesnidis.ptm4j.menu.events.StartEvent;
 import pers.landriesnidis.ptm4j.option.Option;
+import pers.landriesnidis.ptm4j.option.base.OptionHandler;
 import pers.landriesnidis.ptm4j.scene.base.ISceneContext;
 
 public class ElementMenu extends TextMenu{
 	
 	public static final String MY_PACK = "背包";
 	public static final String MY_STATE = "状态";
+	public static final String EXERCISE_FORCE = "修炼";
 	
 	public ElementMenu() {
 		setAllowShowSerialNumber(true);
@@ -23,8 +25,27 @@ public class ElementMenu extends TextMenu{
 		// 在所有地图中输入“我的背包”即可跳转至个人背包TextMenu
 		addMenuOption(MY_PACK, PackMenu.class);
 		getLastOption().setVisibility(false);
+		
+		// 玩家状态
 		addTextOption(MY_STATE, null);
 		getLastOption().setVisibility(false);
+		
+		// 修炼功法
+		addTextOption(EXERCISE_FORCE, null);
+		getLastOption().setVisibility(false);
+		getLastOption().setPreparatoryExecuteHandler(new OptionHandler() {
+			@Override
+			public boolean preparatoryExecuteHandle(String text, ISceneContext sceneContext, Object dataTag,
+					Option optionContext) {
+				Player player = ((PlayerScene)sceneContext).getPlayer();
+				if(player.exerciseForce()) {
+					showMessage("一番修炼之后，个人实力获得了提升...(输入“状态”查看玩家属性)", sceneContext, dataTag);
+				}else {
+					showMessage("暂时无法凝聚气力，可能短时间内无法再进入修炼状态了。", sceneContext, dataTag);
+				}
+				return true;
+			}
+		});
 	}
 	
 	@Override

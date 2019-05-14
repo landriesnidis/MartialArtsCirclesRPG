@@ -1,6 +1,6 @@
 package pers.landriesnidis.macrpg.element;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 import java.util.Random;
 
@@ -11,7 +11,7 @@ import pers.landriesnidis.ptm4j.menu.events.StartEvent;
 public class BaseTrade extends ElementMenu{
 	
 	// 商品列表
-	private HashMap<String, Price> goods;
+	private LinkedHashMap<String, Price> goods;
 	// 价格浮动率
 	private double freeRate;
 	// 时间记录器
@@ -20,7 +20,7 @@ public class BaseTrade extends ElementMenu{
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		goods = new HashMap<String, Price>(); 
+		goods = new LinkedHashMap<String, Price>(); 
 	}
 	
 	@Override

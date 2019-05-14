@@ -20,14 +20,14 @@ public class VillageMap extends BaseMap{
 		setTitle("小渔村");
 		setAllowShowSerialNumber(true);
 		
-		addTextLine("·-·-·NPC·-·-·");
+		addTextLine("·-·-·人物·-·-·");
 		addMenuOption("老村长", TextMenuManager.getMenuByClass(VillageHeadNPC.class));
 		addMenuOption("老神棍", TextMenuManager.getMenuByClass(GodStickNPC.class));
 		
 		addTextLine("·-·-·店铺·-·-·");
 		addMenuOption("杂货铺", TextMenuManager.getMenuByClass(VillageNotionStore.class));
 		addMenuOption("渔村客栈", TextMenuManager.getMenuByClass(VillageInnStore.class));
-		
+		addMenuOption("铁匠铺", TextMenuManager.getMenuByScript("./script/map/VillageSmithy.lua"));
 		
 		addTextLine("·-·-·地图·-·-·");
 		addMenuOption("小河边", TextMenuManager.getMenuByScript("./script/map/VillageRiverMap.lua"));
