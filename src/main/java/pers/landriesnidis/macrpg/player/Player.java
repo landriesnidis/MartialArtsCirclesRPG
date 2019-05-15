@@ -403,9 +403,13 @@ public class Player implements IPlayer{
 		return false;
 	}
 	
+	/**
+	 * 修炼内功
+	 * 当未修炼内功或修炼CD未到则返回false
+	 */
 	public boolean exerciseForce(){
 		// 如果没有功法或功法冷却时间没到则返回false
-		if(this.force!=null && !isCanExerciseForce()){
+		if(this.force==null || !isCanExerciseForce()){
 			return false;
 		}
 		ForceItem force = (ForceItem) PropManager.getItemByName(this.force);
