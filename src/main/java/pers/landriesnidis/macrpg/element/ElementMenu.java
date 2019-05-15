@@ -38,11 +38,16 @@ public class ElementMenu extends TextMenu{
 			public boolean preparatoryExecuteHandle(String text, ISceneContext sceneContext, Object dataTag,
 					Option optionContext) {
 				Player player = ((PlayerScene)sceneContext).getPlayer();
-				if(player.exerciseForce()) {
-					showMessage("一番修炼之后，个人实力获得了提升...(输入“状态”查看玩家属性)", sceneContext, dataTag);
+				if(player.getForce()==null) {
+					showMessage("当前未学习任何内功心法，无法进入修炼。", sceneContext, dataTag);
 				}else {
-					showMessage("暂时无法凝聚气力，可能短时间内无法再进入修炼状态了。", sceneContext, dataTag);
+					if(player.exerciseForce()) {
+						showMessage("一番修炼之后，个人实力获得了提升...(输入“状态”查看玩家属性)", sceneContext, dataTag);
+					}else {
+						showMessage("暂时无法凝聚气力，可能短时间内无法再进入修炼状态了。", sceneContext, dataTag);
+					}
 				}
+				
 				return true;
 			}
 		});
