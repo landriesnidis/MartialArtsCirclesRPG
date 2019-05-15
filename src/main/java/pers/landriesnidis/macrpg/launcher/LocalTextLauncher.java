@@ -12,7 +12,7 @@ public class LocalTextLauncher {
 		
 		DataLoader.loadResourceFile();
 		
-		PlayerScene scene = new PlayerScene("@wx_id001",new SceneReader() {
+		PlayerScene scene = new PlayerScene("@wx_id000",new SceneReader() {
 			public void output(String text, IMenuContext menuContext, ISceneContext context, Object dataTag) {
 				System.out.println(text);
 			}
